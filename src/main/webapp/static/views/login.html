@@ -1,0 +1,46 @@
+
+		
+		<div class="col-md-3">
+		</div>
+		<div class="col-md-9 login_view">
+			<form class="form-horizontal form-custom" role="form">
+				<div class="form-group">
+					<p class="login-para">  Ready to get started? All you need is to login to your account. </p> </br>
+					<label for="inputEmail3" class="col-sm-2 control-label">
+						Email
+					</label>
+					<div class="col-sm-4">
+						<input type="text" class="form-control" id="inputEmail3" ng-model="ctrlLogin.userId">
+					</div>
+				</div>
+				<div class="form-group">
+					 
+					<label for="inputPassword3" class="col-sm-2 control-label">
+						Password
+					</label>
+					<div class="col-sm-4">
+						<input type="password" class="form-control" id="inputPassword3" ng-model="ctrlLogin.password">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-1 col-sm-10">
+						<div class="checkbox">
+							 
+							<label>
+								<input type="checkbox"> Remember me
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-1 col-sm-10">
+						 
+						<button class="btn btn-default" ng-click="ctrlLogin.getUser()">
+							Sign in
+						</button>
+						<br>
+						<a style="margin-left:20%" href="" ng-click="ctrlLogin.registerClick()">Not a User Yet Then click here to Register</a>
+					</div>
+				</div>
+			</form>
+		</div>

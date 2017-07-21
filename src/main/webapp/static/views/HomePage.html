@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Magic Leap Blog Assignment</title>
+
+    <meta name="Manohar Gandrakota" content="Magic Leap Blog Assignment">
+    
+    <script src="static/plugins/jquery.min.js"></script>
+    <script src="static/plugins/bootstrap.min.js"></script>
+	<script src="static/plugins/angular.min.js"></script>
+	<script src="static/plugins/angular-route.min.js"></script>
+
+	<script src="static/js/app.js"></script>
+	
+	<script src="static/js/controller/ctrlHome.js"></script>
+	<script src="static/js/controller/ctrlLogin.js"></script>
+	<script src="static/js/controller/ctrlRegister.js"></script>
+	<script src="static/js/controller/ctrlPost.js"></script>
+	<script src="static/js/controller/ctrlComment.js"></script>
+	
+	<script src="static/js/service/homeService.js"></script>
+	<script src="static/js/service/loginService.js"></script>
+	<script src="static/js/service/registerService.js"></script>
+	<script src="static/js/service/postService.js"></script>
+	<script src="static/js/service/commentService.js"></script>
+	
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+
+  </head>
+  <body ng-app="app" ng-controller="ctrlHome as ctrlHome" class="bodyClass">
+
+    <div class="containerS-fluid">
+    <header>
+    <div class="row_new">{{ctrlLogin.Id}}</div>
+	<div class="row_new header_view">
+		<div class="col-md-2">
+		</div>
+		<div class="col-md-10">
+			<h1 class="header">
+						MAGIC LEAP BLOG ASSIGNMENT
+					</h1>
+				<p style="margin-left: 7%;"> <strong>Magic Leap Blog is a platform for all its users to express their views about Company's Products.</strong><br></p>
+				<p>This Blog gives flexibility to the users to register and then create posts and express their views on different products.
+				Also every user </br> can share his views by commenting on other user's posts. So why waiting login/register to get started !!!</p><br>
+				 <button class="logout buttonClass" ng-hide="logoutShow" ng-click="logoutClick()"> LOGOUT </button><br><br>
+		</div><br>
+	</div><br>
+	
+	<div class="row_new">
+	
+	</div>
+	</header>
+	
+	<div class="row_view">
+		<div ng-view></div>
+	</div>
+			
+			
+			<footer> 
+			<div class="row_new footer_view">
+				<div class="col-md-5">
+					<img alt="NAU LOGO" class="logoClass" src="static/images/magic-leap-logo.png">
+				</div>
+				<div class="col-md-4"><br>
+					<blockquote>
+						<p>
+							COPYRIGHT @ 2017 MAGIC LEAP, INC.
+						</p> <small>Web Blog Assignment</small>
+					</blockquote>
+				</div>
+				<div class="col-md-3"> <br>
+					
+					<address>
+						 <strong>MAGIC LEAP</strong><br> 7500 west sunrise boulevard <br> plantation , FL 33322<br> <abbr title="Phone">P:</abbr> (954) 889-7010
+					</address>
+				</div>
+			</div>
+			</footer>
+		
+
+</div>
+
+  </body>
+</html>
