@@ -1,0 +1,8 @@
+com\magicleap\ui\model\Post.class
+com\magicleap\ui\config\CORSFilter.class
+com\magicleap\ui\model\User.class
+com\magicleap\ui\config\HelloWorldConfiguration.class
+com\magicleap\ui\model\Comment.class
+com\magicleap\ui\controller\IndexController.class
+com\magicleap\ui\controller\AllController.class
+com\magicleap\ui\config\HelloWorldInitializer.class

@@ -1,0 +1,110 @@
+<br><br>
+<div class="container-fluid">
+	<div class="row_new">
+		<div class="col-md-12">
+				<div class="courseList"><span ng-click="ctrlPost.getAllPosts()"><a>All Posts</a></span> -- ||--
+				<span ng-click="ctrlPost.getUserPosts()"><a>View Your Posts</a></span>
+				<span class="courseListSpan" ng-click="ctrlPost.createPost()"><a>Create New Post</a></span> </div><br><br>
+			</div>
+			</div>
+			
+			<div class="col-md-12" ng-hide="ctrlPost.view">
+			<div ng-repeat="post in ctrlPost.posts">
+				<div  class="courseList">
+				<span ng-click="ctrlPost.postClick(post.postid, post.userid)"> <a>Post Title -- {{post.posttitle}} || Posted By -- {{post.userid}} </a> </span>
+				<span class="courseListSpan">Post Date - {{post.postdate}} </span> <br>
+				
+				Post Details : {{post.postdetails}}
+				<br><br>
+				<Span>
+				<button class="btn btn-default" ng-hide="post.show" ng-click="ctrlPost.updatePost(post)">
+							Update
+						</button>
+				<button class="btn btn-default courseListSpan" ng-hide="post.show" ng-click="ctrlPost.deletePost(post.postid)">
+							Delete
+						</button>
+				</Span>
+				</div><br>
+				
+			</div>
+			</div>
+			
+		<div class="col-md-12" ng-hide="ctrlPost.update">
+		<div class="col-md-3">
+		</div>
+		<div class="col-md-9 login_view">
+			<form class="form-horizontal form-custom" role="form">
+				<div class="form-group">
+					<label for="userId3" class="col-sm-2 control-label">
+						Post Title
+					</label>
+					<div class="col-sm-4">
+						<input type="text" class="form-control" id="userId3" ng-model="ctrlPost.updatepostid" ng-value="ctrlPost.updatePost.postid" ng-disabled="true">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label for="userId3" class="col-sm-2 control-label">
+						Post Title
+					</label>
+					<div class="col-sm-4">
+						<input type="text" class="form-control" id="userId3" ng-value="ctrlPost.updatePost.posttitle" ng-model="ctrlPost.updateposttitle">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="registerName3" class="col-sm-2 control-label">
+						Post Content
+					</label>
+					<div class="col-sm-4">
+						<input type="text" class="form-control" id="registerName3" ng-value="ctrlPost.updatePost.postdetails" ng-model="ctrlPost.updatepostdetails">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-1 col-sm-10">
+						 
+						<button class="btn btn-default" ng-click="ctrlPost.updatePostClick()">
+							Update Post
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+			</div>
+			
+		<div class="col-md-12" ng-hide="ctrlPost.create">
+		<div class="col-md-3">
+		</div>
+		<div class="col-md-9 login_view">
+			<form class="form-horizontal form-custom" role="form">
+				<div class="form-group">
+					<label for="userId3" class="col-sm-2 control-label">
+						Post Title
+					</label>
+					<div class="col-sm-4">
+						<input type="text" class="form-control" id="userId3" ng-model="ctrlPost.posttitle">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="registerName3" class="col-sm-2 control-label">
+						Post Content
+					</label>
+					<div class="col-sm-4">
+						<input type="text" class="form-control" id="registerName3" ng-model="ctrlPost.postdetails">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-1 col-sm-10">
+						 
+						<button class="btn btn-default" ng-click="ctrlPost.createPostClick()">
+							Create Post
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+			</div>
+		
+
+		
+	</div>
+

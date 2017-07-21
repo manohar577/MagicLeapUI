@@ -1,0 +1,93 @@
+<br><br>
+<div class="container-fluid">
+	<div class="row_new">
+		<div class="col-md-12">
+				<div class="courseList"><span ng-click="ctrlComment.commentClick()"><a>Go Back</a></span> -- ||--
+				<span ng-click="ctrlComment.getAllComments()"><a>View All Comments</a></span>
+				<span class="courseListSpan" ng-click="ctrlComment.createComment()"><a>Add New Comment</a></span> </div><br><br>
+			</div>
+			</div>
+			
+			<div class="col-md-12" ng-hide="ctrlComment.view">
+			<div ng-repeat="comment in ctrlComment.comments">
+				<div  class="courseList">
+				<span> <a>Comment Details -- {{comment.details}} || Posted By -- {{comment.userid}} </a> </span>
+				<span class="courseListSpan">Comment Date - {{comment.datetime}} </span> <br>
+				
+				<br>
+				<Span>
+				<button class="btn btn-default" ng-hide="comment.show" ng-click="ctrlComment.updateComment(comment)">
+							Update
+						</button>
+				<button class="btn btn-default courseListSpan" ng-hide="comment.show" ng-click="ctrlComment.deleteComment(comment.commentid)">
+							Delete
+						</button>
+				</Span>
+				</div><br>
+				
+			</div>
+			</div>
+			
+		<div class="col-md-12" ng-hide="ctrlComment.update">
+		<div class="col-md-3">
+		</div>
+		<div class="col-md-9 login_view">
+			<form class="form-horizontal form-custom" role="form">
+				<div class="form-group">
+					<label for="userId3" class="col-sm-2 control-label">
+						Comment Id
+					</label>
+					<div class="col-sm-4">
+						<input type="text" class="form-control" id="userId3" ng-model="ctrlComment.commentid" ng-value="ctrlComment.updateComment.commentid" ng-disabled="true">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label for="registerName3" class="col-sm-2 control-label">
+						Comment Content
+					</label>
+					<div class="col-sm-4">
+						<input type="text" class="form-control" id="registerName3" ng-value="ctrlComment.updateComment.details" ng-model="ctrlComment.updatecommentdetails">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-1 col-sm-10">
+						 
+						<button class="btn btn-default" ng-click="ctrlComment.updateCommentClick()">
+							Update Comment
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+			</div>
+			
+		<div class="col-md-12" ng-hide="ctrlComment.create">
+		<div class="col-md-3">
+		</div>
+		<div class="col-md-9 login_view">
+			<form class="form-horizontal form-custom" role="form">
+				<div class="form-group">
+					<label for="registerName3" class="col-sm-2 control-label">
+						Comment Content
+					</label>
+					<div class="col-sm-4">
+						<input type="text" class="form-control" id="registerName3" ng-model="ctrlComment.details">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-1 col-sm-10">
+						 
+						<button class="btn btn-default" ng-click="ctrlComment.createCommentClick()">
+							Add Comment
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+			</div>
+		
+
+		
+	</div>
+
